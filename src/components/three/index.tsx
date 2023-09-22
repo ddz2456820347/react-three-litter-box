@@ -37,13 +37,13 @@ async function init(container: HTMLElement) {
   //对模型文件glb进行解码操作 某些glb文件不需要
 
   const dracoLoader = await new DRACOLoader();
-  dracoLoader.setDecoderPath("../public/gltf/");
+  dracoLoader.setDecoderPath("../../../public/gltf/");
   loader.setDRACOLoader(dracoLoader);
 
   //加载模型文件
 
   loader.load(
-    "../public/litter.glb",
+    "../../../public/glb/bmw.glb",
     (glb) => {
       console.log(glb.scene);
       glb.scene.position.set(0, 0, 0);
