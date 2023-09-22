@@ -1,4 +1,4 @@
-import Three from "./components/three";
+import Three from "@components/three";
 import "./App.scss";
 
 export default function App() {

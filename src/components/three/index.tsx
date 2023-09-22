@@ -71,7 +71,7 @@ async function init(container: HTMLElement) {
   animate();
 }
 
-export default function Three() {
+export default function Three(): React.JSX.Element {
   const container = useRef(null);
 
   useEffect(() => {
