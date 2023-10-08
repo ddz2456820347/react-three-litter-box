@@ -1,20 +1,21 @@
 import { useEffect, useRef } from "react";
-import "./index.scss";
+import "./three.scss";
 import { init } from "./InitThree";
 
 export default function Three(): React.JSX.Element {
-  const container = useRef(null);
+  const container = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    try {
-      init(container.current as unknown as HTMLDivElement);
-    } catch (err) {
-      console.log(err);
-    }
+    const initContainer = async () => {
+      try {
+        await init(container.current as HTMLDivElement);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    initContainer();
   }, []);
-  return (
-    <>
-      <div className="container" ref={container}></div>
-    </>
-  );
+
+  return <div className="container" ref={container} />;
 }

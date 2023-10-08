@@ -41,7 +41,7 @@ async function init(container: HTMLElement) {
 	//加载模型文件
 
 	loader.load(
-		"../../../public/glb/bmw.glb",
+		"../../../public/glb/litter.glb",
 		(glb) => {
 			console.log(glb.scene);
 			glb.scene.position.set(0, 0, 0);
